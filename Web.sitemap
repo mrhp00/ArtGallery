@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="صفحه اصلی"  >
+    <siteMapNode url="BrowseNews.aspx" title="اخبار" />
+    <siteMapNode url="BrowseArticleCategories.aspx" title="مقالات" />
+    <siteMapNode url="Forum.aspx" title="انجمن بحث و گفتگو" />
+    <siteMapNode url="Polls.aspx" title="نظر سنجی" />
+    <siteMapNode url="BrowsePolls.aspx" title="آرشیو نظرسنجی" />
+    <siteMapNode url="BrowseUsers.aspx" title="لیست کاربران" />
+    <siteMapNode url="CreateUser.aspx" title="عضویت در سایت" />
+    <siteMapNode url="Search.aspx" title="جستجو در سایت" />
+    <siteMapNode url="EnterLink.aspx" title="ورود لینک شما" />
+    <siteMapNode url="About.aspx" title="درباره ما" />
+    <siteMapNode url="Users/ChangeProfile.aspx" title="تنظیمات کاربری" />
+    <siteMapNode url="SiteAdmin/EnterArticleCategories.aspx" title="مدیریت سایت" />
+  </siteMapNode>
+</siteMap>

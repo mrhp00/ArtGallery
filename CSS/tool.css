@@ -1,0 +1,112 @@
+﻿.TopRight
+{
+    width: 20px; 
+    height: 26px;
+    background:url(../Images/04.gif) no-repeat right top;  
+}
+
+.BottomLeft
+{
+    background-position: -1px top; 
+    background-image: url(../Images/01.gif);
+    width: 20px; 
+    background-repeat: no-repeat; 
+    height: 26px;
+}
+
+.BackImage
+{
+    width: 10%; 
+    background:url(../Images/body_bg.gif) repeat left top  
+}
+
+.Row
+{
+    border-bottom:solid 1px #D7D7E6;
+}
+
+.Col1
+{
+    background-color:#F5F5FF;
+}
+
+.Col2
+{
+    background-color:#E1E4F2;
+}
+
+.BottomRight
+{
+    width: 20px; 
+    height: 26px;
+    background:url(../Images/02.gif) no-repeat center top
+}
+
+.MenuTitle
+{
+    background-position: center top; 
+    background-image: url(../Images/Menu.gif); 
+    background-repeat: no-repeat; 
+    height: 28px;
+}
+
+.LinkTitle
+{
+    background-position: center top; 
+    background-image: url(../Images/Payivandha.gif); 
+    background-repeat: no-repeat; 
+    height: 28px;
+}
+
+.LeftSide
+{
+    background-position: left top; 
+    background-image: url(../Images/1pix.gif); 
+    width: 20px; 
+    background-repeat: repeat-y; 
+    height: 150px;
+}
+
+.RightSide
+{
+    background-position: 17px top; 
+    background-image: url(../Images/1pix.gif); 
+    background-repeat: repeat-y; 
+    height: 150px;
+}
+
+
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+	visibility : hidden;
+	margin : 0px;/*!important;*/
+	padding:3px;
+	background-color : #FFFEE6;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	color : windowtext;
+	border :solid 1px #0b198c;
+	cursor : 'default';
+	overflow : auto;
+	height : 100px;
+    text-align : left; 
+    list-style-type : none;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: #0066cc;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : #FFFEE6;
+	color : windowtext;
+}

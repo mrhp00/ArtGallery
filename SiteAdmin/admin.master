@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../CSS/grid.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/Polls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/round.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/site.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tool.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+            <tr style="background-image: url(../Images/Banner-1-pix.jpg); background-repeat: repeat-x;">
+                <td colspan="3" style="vertical-align: top">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                        <tr>
+                            <td style="vertical-align: top">
+                    <asp:Image ID="Image_Right" runat="server" ImageUrl="~/Images/RightBanner1.jpg" Style="float: right" /><asp:Image
+                        ID="Image_Left" runat="server" ImageUrl="~/Images/LeftBanner1.jpg" Style="float: left" /></td>
+                            <td style="width: 20%; height: 100px">
+                    <Safa:SafaLogin ID="SafaLogin1" runat="server" DisplayRememberMe="False" LoginButtonText="ورود"
+                        PasswordRecoveryText="کلمه عبور خود را  فراموش کرده ام" PasswordRecoveryUrl="~/PasswordRecovery.aspx"
+                        TitleText="" VisibleWhenLoggedIn="False" Width="100%">
+                        <InstructionTextStyle Font-Size="10px" />
+                        <TextBoxStyle Font-Size="10px" />
+                        <LoginButtonStyle Font-Names="Tahoma" Width="120px" />
+                        <ValidatorTextStyle Font-Size="10px" />
+                        <LabelStyle Font-Size="10px" />
+                        <FailureTextStyle Font-Size="10px" />
+                        <HyperLinkStyle Font-Size="10px" />
+                    </Safa:SafaLogin>
+                    <div id="Div_Logined" runat="server" style="padding-right: 5px; font-size: 10px;
+                        vertical-align: middle; width: 100%; padding-top: 5px; height: 100%; text-align: right"
+                        visible="false">
+                        خوش آمدید:<asp:LoginName ID="LoginName2" runat="server" Font-Bold="False" />
+                        <br />
+                        آخرین بازدید شما:<asp:Label ID="Label_LastLagin" runat="server" Font-Bold="False"></asp:Label><br />
+                        <asp:HyperLink ID="HyperLink_NewMessage" runat="server">[HyperLink_NewMessage]</asp:HyperLink><br />
+                        <asp:LoginView ID="LoginView2" runat="server">
+                            <LoggedInTemplate>
+                                <Safa:SafaLoginStatus ID="SafaLoginStatus1" runat="server" Font-Names="Tahoma" Font-Size="10px"
+                                    LogoutPageUrl="~/Default.aspx" LogoutText="خروج از سایت" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </div>
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+            </tr>
+            <tr style="vertical-align: top">
+                <td colspan="3" style="height: 10px">
+                </td>
+            </tr>
+            <tr style="vertical-align:top;">
+                <td style="width: 180px" colspan="">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 180px">
+                        <tr>
+                            <td class="MenuTitle" colspan="3">
+                            </td>
+                        </tr>
+                        <tr style="vertical-align:top;">
+                            <td class="RightSide">
+                            </td>
+                            <td style="line-height: 20px">
+                                &nbsp;<asp:Menu ID="Menu_Main" runat="server" StaticDisplayLevels="2" StaticSubMenuIndent="0px"
+                                    Style="padding-right: 5px; padding-left: 5px" Width="100%">
+                                    <DynamicHoverStyle BackColor="AliceBlue" />
+                                    <StaticSelectedStyle BackColor="LemonChiffon" />
+                                    <DynamicSelectedStyle BackColor="LemonChiffon" />
+                                    <StaticHoverStyle BackColor="AliceBlue" />
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="صفحه اصلی سایت" Value="صفحه اصلی سایت">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterArticleCategories.aspx" Text="ورود گروه مقالات"
+                                            Value="ورود گروه مقالات"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterForumsCategories.aspx" Text="ورود تالارهای انجمن"
+                                            Value="ورود تالارهای انجمن"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterQuastionsPolls.aspx" Text="ورود سوالات نظر سنجی"
+                                            Value="ورود سوالات نظر سنجی"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterOptionsPolls.aspx" Text="ورود گزینه های نظرسنجی"
+                                            Value="ورود گزینه های نظرسنجی"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterNews.aspx" Text="وروداخبار" Value="وروداخبار">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterForums.aspx" Text="ورود انجمن ها" Value="ورود انجمن ها">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/EnterArticle.aspx" Text="ورودمقالات" Value="ورودمقالات">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentArticleCategories.aspx" Text="مدیریت گروه مقالات"
+                                            Value="مدیریت گروه مقالات"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentArticle.aspx" Text="مدیریت مقالات"
+                                            Value="مدیریت مقالات"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentForumsCategories.aspx" Text="مدیریت تالار های انجمن"
+                                            Value="مدیریت تالار های انجمن"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentForums.aspx" Text="مدیریت انجمن ها"
+                                            Value="مدیریت انجمن ها"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentLinks.aspx" Text="مدیریت لینک ها"
+                                            Value="مدیریت لینک ها"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentNews.aspx" Text="مدیریت اخبار" Value="مدیریت اخبار">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentOptionsPolls.aspx" Text="مدیریت گزینه های نظر سنجی"
+                                            Value="مدیریت گزینه های نظر سنجی"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentQuastionsPolls.aspx" Text="مدیریت سوالات نظر سنجی"
+                                            Value="مدیریت سوالات نظر سنجی"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/ManagmentUsers.aspx" Text="مدیریت کاربران سایت"
+                                            Value="مدیریت کاربران سایت"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/SiteAdmin/SendMessageAllUser.aspx" Text="ارسال پیغام به کاربران"
+                                            Value="ارسال پیغام به کاربران"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Users/ChangeProfile.aspx" Text="تنظیمات کاربری" Value="تنظیمات کاربری">
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                             </td>
+                            <td class="LeftSide">
+                            </td>
+                        </tr>
+                        <tr style="vertical-align:top;">
+                            <td class="BottomRight">
+                            </td>
+                            <td rowspan="1" >
+                            </td>
+                            <td class="BottomLeft">
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 180px">
+                        <tr>
+                            <td class="LinkTitle" colspan="3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="RightSide">
+                            </td>
+                            <td style="vertical-align: top; line-height: normal">
+                                <%=SDKClass.Links_LinksList() %>
+                            </td>
+                            <td class="LeftSide">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="BottomRight">
+                            </td>
+                            <td style="vertical-align: top">
+                            </td>
+                            <td class="BottomLeft">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2" style="width: 100%">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center">
+                    تاریخ امروز:<asp:Label ID="Label_Date" runat="server" ForeColor="Navy"></asp:Label>|تعداد
+                    کل بازدیدها:<asp:Label ID="Label_AllViewCount" runat="server" ForeColor="Navy"></asp:Label>|تعداد
+                    کاربران آنلاین:
+                    <asp:Label ID="Label_OnlineCount" runat="server" ForeColor="Navy"></asp:Label></td>
+            </tr>
+            <tr>
+                <td class="Footer" colspan="3">
+                    <hr style="border-right: silver 1px dashed; border-top: silver 1px dashed; border-left: silver 1px dashed;
+                        width: 400px; border-bottom: silver 1px dashed" />
+                    کلیه حقوق این سایت برای تیم نرم افزاری <a href="About.aspx">صفا</a> محفوظ می باشد.<br />
+                    این سایت تحت میزبانی شرکت <a href="http://www.iranhost.com/">ایران هاست</a> کار می کند.</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

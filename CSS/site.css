@@ -1,0 +1,136 @@
+﻿html
+{
+	
+	background:url(../Images/body_bg.gif) repeat 0px 0px;
+}
+
+body
+{
+	direction:rtl;
+    font-family:Tahoma;
+    font-size:12px;
+    vertical-align:top;
+    text-align:justify;
+    background-color:White;
+}
+.Footer
+{
+	text-align:center;
+	vertical-align:middle;
+	color:Gray;
+	font-size:10px;
+	height:100px;
+}
+
+.Header
+{
+    background: url(../Images/Banner-2-pix.jpg) repeat 0px 0px; 
+    height: 100px; 
+}
+
+.Side
+{
+    background: url(../Images/body_bg.gif) repeat 0px 0px; 
+    width: 75px; 
+}
+
+.DropDownList
+{
+    font-family:Tahoma;
+    font-size:12px;
+    width:150px;
+}
+
+.Cadr
+{
+    border-top: double 3px #91a9c3; 
+}
+.Button
+{
+    width:120px;
+    font-family:Tahoma;
+    font-size:12px;
+    height:25px;
+}
+.TextBox
+{   
+    text-align:right;
+    font-family:Tahoma;
+    font-size:12px;
+    color:Black;
+}
+
+.highlight
+{
+   background-color: AliceBlue;/*#fefbd2;*/
+   color: #000080;
+   border:dashed 1px #000080;
+}
+
+.Date
+{
+    direction:ltr;
+}
+
+.Panel
+{
+    width:95%;
+    margin:10px;
+    background-color:Green;
+}
+.Link
+{
+    text-decoration:none;
+    color:#0066CC;
+}
+
+A:visited,A:link
+{
+    text-decoration:none;
+    color:#3838A6;
+}
+
+.WaterMark
+{
+    background-color: AliceBlue;/*#FBFBD3;*/
+    font-family:Tahoma;
+    font-size:12px;
+    color:Navy;
+    border:solid 1px #7F9DB9;
+    height:16px;
+}
+
+
+.popupControl 
+{
+	background-color:#AAD4FF;
+	position:absolute;
+	visibility:hidden;
+	border-style:solid;
+	border-color: Black;
+	border-width: 2px;
+}
+
+.Preview
+{
+	border:solid 1px #3333CC;
+	padding:10px;
+	color:#3333CC;
+	background-color:#FFFFC0;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	overflow:auto;
+	text-align:justify;
+}
+
+.modalPopup {
+	background-color:#ffffdd;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:250px;
+}
+
+
+

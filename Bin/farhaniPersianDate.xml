@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>farhaniPersianDate</name>
+    </assembly>
+    <members>
+        <member name="T:farhaniPersianDate.cDate">
+            <summary>
+            تاریخ شمسی -----
+            برنامه نویس : مهدی فرهانی
+            کلیه حقوق این کتابخانه محفوظ می باشد
+            </summary>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.#ctor">
+            <summary>
+            سازنده کلاس
+            </summary>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.Finalize">
+             <summary>
+            مخرب کلاس
+             </summary>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.getPersianDate">
+            <summary>
+            تبدیل تاریخ شمسی بر اساس تاریخ جاری سیستم
+            </summary>
+            <returns>خروجی تاریخ شمسی</returns>
+            
+        </member>
+        <member name="M:farhaniPersianDate.cDate.getPersianDate(System.DateTime)">
+            <summary>
+            تبدیل تاریخ شمسی بر اساس تاریخ وارده شده به میلادی
+            </summary>
+            <param name="miladiDate">متغییری از نوع تاریخ</param>
+            <returns>خروجی تاریخ شمسی</returns>
+            
+        </member>
+        <member name="M:farhaniPersianDate.cDate.getPersianDate(System.String)">
+            <summary>
+            تبدیل تاریخ شمسی بر اساس تاریخ وارده شده به میلادی
+            </summary>
+            <param name="strMiladiDate">تاریخ میلادی به صورت رشته</param>
+            <returns>خروجی تاریخ شمسی</returns>
+            
+        </member>
+        <member name="M:farhaniPersianDate.cDate.getPersianDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            تبدیل تاریخ میلادی به شمسی
+            </summary>
+            <param name="iYear">سال میلادی</param>
+            <param name="iMonth">ماه میلادی</param>
+            <param name="iDay">روز میلادی</param>
+            <returns>تاریخ شمسی</returns>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.showInDisplyFormat(System.String)">
+            <summary>
+            تابعی برای نمایش تاریخ مورد نظر با استفاده از قالب تعیین شده
+            </summary>
+            <param name="strDate">تاریخ شمسی</param>
+            <returns>رشته ای تاریخ با قالب خاص</returns>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.fulDate(System.String)">
+            <summary>
+            تابعی برای کامل کردن تاریخ شمسی
+            </summary>
+            <param name="strDate">تاریخ شمسی</param>
+            <returns>تاریخ شمسی کامل شده</returns>
+            
+        </member>
+        <member name="M:farhaniPersianDate.cDate.isfulDate(System.String)">
+            <summary>
+            تابعی برای بررسی کامل تاریخ وارد شده
+            </summary>
+            <param name="strDate">تاریخ مورد نظر</param>
+            <returns>بر گردانده می شود True در صورت معتبر بودن</returns>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.isValidDete(System.String)">
+            <summary>
+            تابعی برای بررسی معتبر بودن تاریخ 
+            </summary>
+            <param name="strDate">تاریخ شمسی</param>
+            <returns>بر گردانده می شود True در صورت معتبر بودن</returns>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.RevrseDate(System.String)">
+            <summary>
+            تابعی برای نمایش بر عکس تاریخ به صورت روز ماه سال
+            </summary>
+            <remarks>از این تابع زمانی استفاده می شود که تاریخ فارسی بر عکس نمایش داده می شود ، مانند زمانی که در گرید از آن استفاده میکنید</remarks>
+            <param name="strDate">تاریخ شمسی</param>
+            <returns>تاریخ شمسی بر عکس شده</returns>
+        </member>
+        <member name="M:farhaniPersianDate.cDate.RevrseDate(System.Object)">
+            <summary>
+            تابعی برای نمایش بر عکس تاریخ به صورت روز ماه سال
+            </summary>
+            <remarks>از این تابع زمانی استفاده می شود که تاریخ فارسی بر عکس نمایش داده می شود ، مانند زمانی که در گرید از آن استفاده میکنید</remarks>
+            <param name="objDate">تاریخ شمسی</param>
+            <returns>تاریخ شمسی بر عکس شده</returns>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.Year">
+            <summary>
+            سال.
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.YearFarsi">
+            <summary>
+            سال به صورت فارسی
+            </summary>
+            <returns>یک رشته به عنوان سال</returns>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.Month">
+            <summary>
+            ماه
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.Day">
+            <summary>
+            روز
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.DayWeek">
+            <summary>
+             روز هفته
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.MonthName">
+            <summary>
+            نام ماه
+            </summary>
+            
+        </member>
+        <member name="P:farhaniPersianDate.cDate.dayDateName">
+            <summary>
+            تاریخ روز به صورت حروف
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.DayName">
+            <summary>
+            نام روز
+            </summary>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.displyFormat">
+            <summary>
+            برای تعیین کردن نحوه نمایش تاریخ شمسی به صورت پیش فرض به صورت سال ، ماه ، روز تنظیم شده است
+            هر قسمت باید با سمی کالن جدا شود، برای قرار دادن مقدار جدا کننده از اسلش استفاده کنید
+            </summary>
+            <example>YYYY;/;MM;/;DD</example>
+        </member>
+        <member name="P:farhaniPersianDate.cDate.separatorChar">
+            <summary>
+            کارکتر جدا کننده تاریخ ها به عنوان پیش فرض کارکتر اسلش تنظیم شده است
+            </summary>
+        </member>
+        <member name="T:farhaniPersianDate.cDate.perDayWeek">
+            <summary>
+            روزهای هفته
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.شنبه">
+            <summary>
+            نمایش روز شنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.یکشنبه">
+            <summary>
+            نمایش روز شنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.دوشنبه">
+            <summary>
+            نمایش روز یکشنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.سه_شنبه">
+            <summary>
+            نمایش روز سه شنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.چهارشنبه">
+            <summary>
+            نمایش روز چهارشنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.پنجشنبه">
+            <summary>
+            نمایش روز پنجشنبه
+            </summary>
+        </member>
+        <member name="F:farhaniPersianDate.cDate.perDayWeek.جمعه">
+            <summary>
+            نمایش روز جمعه
+            </summary>
+        </member>
+    </members>
+</doc>

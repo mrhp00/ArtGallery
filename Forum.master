@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Forum.master.cs" Inherits="Forum" EnableViewState="false"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="CSS/site.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/grid.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/round.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/tool.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-color:White;">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <table style="margin-left: 3%; width: 90%; margin-right: 3%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-right: #0b198c 1px solid;
+                        border-top: #0b198c 1px solid; border-left: #0b198c 1px solid; width: 100%; border-bottom: #0b198c 1px solid">
+                        <tr>
+                            <td class="Header" style="height: 100px; vertical-align: top;">
+                                <asp:Image ID="Image_Right" runat="server" ImageUrl="~/Images/RightBanner2.jpg" Style="float: right" />
+                                <asp:Image ID="Image_Left" runat="server" ImageUrl="~/Images/LeftBanner2.jpg" Style="float: left" /></td>
+                            <td class="Col2" style="width: 20%; vertical-align: top;">
+                                <Safa:SafaLogin ID="SafaLogin1" runat="server" DisplayRememberMe="False" LoginButtonText="ورود"
+                                    TitleText="" VisibleWhenLoggedIn="False" PasswordRecoveryText="کلمه عبور خود را  فراموش کرده ام" PasswordRecoveryUrl="~/PasswordRecovery.aspx">
+                                    <LoginButtonStyle Font-Names="Tahoma" Width="120px" />
+                                    <InstructionTextStyle Font-Size="10px" />
+                                    <LabelStyle Font-Size="10px" />
+                                    <HyperLinkStyle Font-Size="10px" />
+                                    <TextBoxStyle Font-Size="10px" />
+                                    <ValidatorTextStyle Font-Size="10px" />
+                                    <FailureTextStyle Font-Size="10px" />
+                                </Safa:SafaLogin>
+                                <div id="Div_Logined" style="padding-right: 5px; vertical-align: middle; width: 99%;
+                                    height: 100%; text-align: right; padding-top: 5px; font-size: 10px;" runat="server" visible="false">
+                                    خوش آمدید:<asp:LoginName ID="LoginName2" runat="server" Font-Bold="False" />
+                                    <br />
+                                    آخرین بازدید شما:<asp:Label ID="Label_LastLagin" runat="server" Font-Bold="False"></asp:Label><br />
+                                    <asp:HyperLink ID="HyperLink_NewMessage" runat="server">[HyperLink_NewMessage]</asp:HyperLink><br />
+                                    <asp:LoginView ID="LoginView2" runat="server">
+                                        <LoggedInTemplate>
+                                            <Safa:SafaLoginStatus ID="SafaLoginStatus1" runat="server" LogoutText="خروج از سایت" LogoutPageUrl="~/Forum.aspx" Font-Names="Tahoma" Font-Size="10px" />
+                                        </LoggedInTemplate>
+                                    </asp:LoginView>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="border-top: #0b198c 1px solid; height: 20px; background-color: #738fbf; padding-right: 5px; padding-left: 5px; vertical-align: middle; text-align: center;">
+                                <asp:Menu ID="Menu_User" runat="server" Font-Bold="True" Orientation="Horizontal"
+                                    Width="100%">
+                                    <StaticMenuItemStyle ForeColor="White" />
+                                    <DynamicHoverStyle ForeColor="White" />
+                                    <DynamicMenuItemStyle ForeColor="White" />
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="صفحه اصلی سایت" Value="صفحه اصلی سایت">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="صفحه اصلی انجمن" Value="صفحه اصلی انجمن">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/CreateUser.aspx" Text="ثبت نام" Value="ثبت نام"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/BrowseUsers.aspx" Text="لیست کاربران" Value="فهرست کاربران">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/BrowseArticleCategories.aspx" Text="مقالات" Value="مقالات">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Search.aspx" Text="جستجو" Value="جستجو"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Users/Inbox.aspx" Text="پیامهای دریافتی" Value="New Item">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Users/Outbox.aspx" Text="پیامهای ارسالی" Value="New Item">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Users/ChangeProfile.aspx" Text="تغییر مشخصات" Value="New Item">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="مدیریت" Value="New Item" NavigateUrl="~/SiteAdmin/EnterArticle.aspx"></asp:MenuItem>
+                                    </Items>
+                                    <StaticHoverStyle ForeColor="White" />
+                                </asp:Menu>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 10px">
+                </td>
+            </tr>
+            <tr>
+                <td style="border: #333399 1px solid; height: 100px;">
+                    <%=SDKClass.Forums_NewTopics() %>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 10px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 10px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border: #0b198c 1px solid;width: 100%;">
+                        <tr>
+                            <td colspan="2" style="font-weight: bold; color: white; height: 30px; background-color: #869bbf">
+                                فعاليت هاي در حال انجام در انجمن</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-weight: bold; color: white; height: 20px; background-color: #5c7099">
+                                &nbsp;کاربران حاضر در سایت:
+                                <asp:Label ID="Label_UserOnlineCount" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="Col2" style="vertical-align: middle; width: 5%; text-align: center">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/whos_online.gif" /></td>
+                            <td class="Col1" style="padding-right: 5px; vertical-align: middle">
+                                <div id="Div_UserList" style="vertical-align: middle; width: 100%; height: 60px; text-align: right" runat="server">
+                                
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-weight: bold; color: white; height: 20px; background-color: #5c7099">
+                                &nbsp;آمار و ارقام سایت انجمن صفا</td>
+                        </tr>
+                        <tr>
+                            <td class="Col2" style="vertical-align: middle; text-align: center">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/stats.gif" /></td>
+                            <td class="Col1" style="padding-right: 5px; height: 60px;">
+                                
+                                        
+                                        موضوع ها:
+                                        <asp:Label ID="Label_TopicCount" runat="server"></asp:Label>, نوشته ها:
+                                        <asp:Label ID="Label_ReplyCount" runat="server"></asp:Label>, مقالات:<asp:Label ID="Label_ArticleCount"
+                                            runat="server"></asp:Label>
+                                , اخبار:<asp:Label ID="Label_NewsCount" runat="server"></asp:Label>
+                                , &nbsp;کاربران:
+                                        <asp:Label ID="Label_UserCount" runat="server"></asp:Label>
+                                , کل بازدیدها:<asp:Label ID="Label_ViewCount" runat="server"></asp:Label><br />
+                                    
+                                    
+                                        به جدید ترین عضو انجمن,
+                                        <asp:HyperLink ID="HyperLink_LastUser" runat="server">[HyperLink_LastUser]</asp:HyperLink>
+                                        خوش آمد میگوییم.
+                                    
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            <Safa:SafaLoginStatus ID="SafaLoginStatus1" runat="server" LogoutText="خروج از سایت:" LogoutPageUrl="~/Forum.aspx" />
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </td>
+            </tr>
+            <tr>
+                <td class="Footer" colspan="3">
+                    <hr style="border-right: silver 1px dashed; border-top: silver 1px dashed; border-left: silver 1px dashed;
+                        width: 400px; border-bottom: silver 1px dashed" />
+                    کلیه حقوق این سایت برای تیم نرم افزاری <a href="About.aspx">صفا </a>محفوظ می باشد.<br />
+                    این سایت تحت میزبانی شرکت <a href="http://www.iranhost.com/">ایران هاست</a> کار می کند.</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

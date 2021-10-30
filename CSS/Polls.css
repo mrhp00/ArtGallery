@@ -1,0 +1,21 @@
+﻿.Normal 
+{
+    font-family:Tahoma;
+    font-size:10px;
+    font-weight:normal;
+}
+
+.PollCaption
+{
+    font-size: 11px;
+    color: #354A70;
+    font-family: tahoma;
+    background-color: #BFC2D1;
+}
+
+
+.PollBack
+{
+    background-color: White;
+}
+
